@@ -1,1 +1,18 @@
+<nav>
+  <ul>
+    <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">login</a></li>
+    <li><a routerLink="/user" routerLinkActive="active" ariaCurrentWhenActive="page">user</a></li>
+    <li><a routerLink="/user2" routerLinkActive="active" ariaCurrentWhenActive="page">user</a></li>
+    <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">home</a></li>
+    <li><button (click)="authService.logout()">CERRAR SESION</button></li>
+  </ul>
+</nav>
+
+@if (loading) {
+<div class="spinner-wrapper">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+}
 <router-outlet />

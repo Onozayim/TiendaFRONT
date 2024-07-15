@@ -6,7 +6,8 @@ import { guestGuard } from './guards/guest/guest.guard';
 import { UserComponent } from './components/user/user.component';
 
 export const routes: Routes = [
+  { path: '', component: HomeComponent, canActivate: [authGuard] },
   { path: 'login', component: LoginComponent, canActivate: [guestGuard] },
-  { path: '', component: HomeComponent },
   { path: 'user', component: UserComponent, canActivate: [authGuard] },
+  { path: 'user2', component: UserComponent, canActivate: [authGuard] },
 ];
